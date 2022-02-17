@@ -1,10 +1,15 @@
 import React, { useState } from 'react';
 import './GiveCandyPage.css';
-import CustomPopup from "./CustomPopup";
+import { Link, useNavigate } from 'react-router-dom'
 
 
 const GiveCandyPage = () => {
 
+  const navigate = useNavigate();
+
+  const inputName = (e) => {
+    navigate("/givecandy/inputname");
+  }
 
   const [userName, setUserName] = useState("");
 
@@ -21,10 +26,8 @@ const GiveCandyPage = () => {
 
       <img src={"/img/candyMachine_512.png"} height="450" width="450" alt="candyMachine" />
       <div class="overlay">
-        <button class="giveBtn"><img src={"/img/btn_give_light_250.png"} height="150" width="150" /></button>
+        <button onClick={inputName} class="giveBtn"><img src={"/img/btn_give_light_250.png"} height="150" width="150" /></button>
       </div>
-
-
 
     </div>
   );

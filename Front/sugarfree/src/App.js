@@ -8,15 +8,19 @@ import { RegisterPage } from "./pages/RegisterPage";
 import { MainPage } from "./pages/MainPage/Main";
 import { MyMainPage } from "./pages/MainPage/My";
 import { GiveCandyPage } from "./pages/GiveCandyPage";
+import { InputName } from "./pages/GiveCandyPage";
 
 const App = () => {
   return (
+
     <Routes>
+
       <Route path="/main" element={<MainPage></MainPage>} />
       <Route path="/main/userid" element={<MyMainPage></MyMainPage>} />
       <Route path="/login" element={<LoginPage></LoginPage>} />
       <Route path="/register" element={<RegisterPage></RegisterPage>} />
       <Route path="/givecandy" element={<GiveCandyPage></GiveCandyPage>} />
+      <Route path="/givecandy/inputname" element={<InputName></InputName>} />
 
     </Routes>
     //</div>
